@@ -1,5 +1,10 @@
 package com.example.sgrDatabase.models;
 
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "meals")
 public class Meal {
     private int id;
     private String name;
