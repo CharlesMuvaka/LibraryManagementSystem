@@ -1,7 +1,11 @@
 package com.example.sgrDatabase.models;
 
+import javax.persistence.Entity;
+import javax.persistence.Table;
+import javax.persistence.UniqueConstraint;
 import java.sql.Timestamp;
-
+@Entity
+@Table(name = "orders")
 public class Order {
     private int id;
     private int userId;
