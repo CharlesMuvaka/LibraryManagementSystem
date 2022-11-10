@@ -1,7 +1,10 @@
 package com.example.sgrDatabase.models;
 
+import javax.persistence.Entity;
+import javax.persistence.Table;
 import java.sql.Timestamp;
-
+@Entity
+@Table(name = "done_orders")
 public class DoneOrder {
 
     private int id;
