@@ -1,5 +1,16 @@
 package com.example.sgrDatabase.models;
 
+import javax.persistence.Entity;
+import javax.persistence.Table;
+import javax.persistence.UniqueConstraint;
+
+@Entity
+@Table(name = "user",
+        uniqueConstraints = {
+                @UniqueConstraint(name = "user_idNumber", columnNames = "user_number"),
+                @UniqueConstraint(name = "user_email_address", columnNames = "user_email_address"),
+                @UniqueConstraint(name = "user_phone_number", columnNames = "user_phone_number"),
+        })
 public class User {
     private int id;
     private int userIdNumber;
