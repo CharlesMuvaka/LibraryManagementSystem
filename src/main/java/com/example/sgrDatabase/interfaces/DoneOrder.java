@@ -8,6 +8,7 @@ public interface DoneOrder {
     //create
     void addDoneOrder(DoneOrder doneOrder);
     //Read
+    DoneOrder getDoneOrderById(int id);
 
     //Update
     //delete
