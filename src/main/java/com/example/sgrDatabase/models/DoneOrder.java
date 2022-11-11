@@ -1,5 +1,7 @@
 package com.example.sgrDatabase.models;
 
+import org.hibernate.annotations.CreationTimestamp;
+
 import javax.persistence.*;
 import java.sql.Timestamp;
 @Entity
@@ -14,9 +16,20 @@ public class DoneOrder {
     @GeneratedValue(strategy = GenerationType.SEQUENCE,
                     generator = "done_order_sequence")
     private int id;
+    @Column(name = "waiter_id",
+            columnDefinition = "INTEGER")
     private int waiterId;
+    @Column(name = "meal_id",
+            columnDefinition = "INTEGER")
     private int mealId;
+    @Column(name = "user_id",
+            columnDefinition = "INTEGER")
     private int userId;
+    @CreationTimestamp
+    @Column(
+            updatable = false,
+            name = "created_at"
+    )
     private Timestamp doneTime;
 
     public DoneOrder(int waiterId, int mealId, int userId, Timestamp doneTime) {
