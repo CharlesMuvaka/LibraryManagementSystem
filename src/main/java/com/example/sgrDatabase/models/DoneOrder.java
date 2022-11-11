@@ -1,15 +1,18 @@
 package com.example.sgrDatabase.models;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.sql.Timestamp;
 @Entity
 @Table(name = "done_orders")
 public class DoneOrder {
     @Id
     @Column(name = "user_id")
+    @SequenceGenerator(name = "done_order_sequence",
+                        sequenceName = "done_order_sequence",
+                        initialValue = 1,
+                        allocationSize = 1)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE,
+                    generator = "done_order_sequence")
     private int id;
     private int waiterId;
     private int mealId;
