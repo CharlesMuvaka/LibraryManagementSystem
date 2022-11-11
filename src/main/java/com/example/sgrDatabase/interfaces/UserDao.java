@@ -1,4 +1,8 @@
 package com.example.sgrDatabase.interfaces;
 
-public interface User {
+import com.example.sgrDatabase.models.User;
+
+public interface UserDao {
+    //Create
+    void addUser(User user);
 }
