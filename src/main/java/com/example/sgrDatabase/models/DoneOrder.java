@@ -1,12 +1,15 @@
 package com.example.sgrDatabase.models;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.Id;
 import javax.persistence.Table;
 import java.sql.Timestamp;
 @Entity
 @Table(name = "done_orders")
 public class DoneOrder {
-
+    @Id
+    @Column(name = "user_id")
     private int id;
     private int waiterId;
     private int mealId;
