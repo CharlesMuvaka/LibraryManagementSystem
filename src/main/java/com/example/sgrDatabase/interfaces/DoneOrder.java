@@ -10,6 +10,9 @@ public interface DoneOrder {
     //Read
     DoneOrder getDoneOrderById(int id);
     List<Waiter> getWaitersDoneOrdersById(int id);
+    List<DoneOrder> getAllDoneOrders();
+
+
 
     //Update
     //delete
