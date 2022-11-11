@@ -3,11 +3,12 @@ package com.example.sgrDatabase.services;
 import com.example.sgrDatabase.interfaces.DoneOrderDao;
 import com.example.sgrDatabase.interfaces.UserDao;
 import com.example.sgrDatabase.models.DoneOrder;
-import com.example.sgrDatabase.models.Waiter;
 import com.example.sgrDatabase.repositories.DoneOrderRepo;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
+
 @Service
 public class DoneOrderService implements DoneOrderDao {
     private DoneOrderRepo repo;
@@ -27,8 +28,8 @@ public class DoneOrderService implements DoneOrderDao {
     }
 
     @Override
-    public List<Waiter> getWaitersDoneOrdersById(int id) {
-        return null;
+    public Optional<DoneOrder> getWaitersDoneOrdersById(int waiterId) {
+        return repo.findById(waiterId);
     }
 
     @Override
