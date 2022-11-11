@@ -22,7 +22,7 @@ public class MealService implements MealDao {
 
     @Override
     public Meal getMealById(int id) {
-        return null;
+        return repo.getReferenceById(id);
     }
 
     @Override
