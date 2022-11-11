@@ -10,4 +10,5 @@ public interface MealDao {
     //Read
     Meal getMealById(int id);
     List<Meal> getAllMeals();
+    List<Meal> findByCategory();
 }
