@@ -2,12 +2,19 @@ package com.example.sgrDatabase.services;
 
 import com.example.sgrDatabase.interfaces.MealDao;
 import com.example.sgrDatabase.models.Meal;
+import com.example.sgrDatabase.repositories.MealRepo;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 @Service
 public class MealService implements MealDao {
+    private MealRepo repo;
+
+    public MealService(MealRepo repo) {
+        this.repo = repo;
+    }
+
     @Override
     public void addMeal(Meal meal) {
 
