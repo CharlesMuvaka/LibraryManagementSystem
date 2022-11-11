@@ -1,12 +1,14 @@
 package com.example.sgrDatabase.models;
 
+import org.hibernate.annotations.CreationTimestamp;
+
 import javax.persistence.*;
 import java.sql.Timestamp;
 @Entity
 @Table(name = "orders")
 public class Order {
     @Id
-    @Column(name = "user_id")
+    @Column(name = "order_id")
     @SequenceGenerator(name = "order_sequence",
             sequenceName = "order_sequence",
             initialValue = 1,
@@ -14,8 +16,17 @@ public class Order {
     @GeneratedValue(strategy = GenerationType.SEQUENCE,
             generator = "order_sequence")
     private int id;
+    @Column(name = "user_id",
+            columnDefinition = "INTEGER")
     private int userId;
+    @Column(name = "meal_id",
+            columnDefinition = "INTEGER")
     private int mealId;
+    @CreationTimestamp
+    @Column(
+            updatable = false,
+            name = "created_at"
+    )
     private Timestamp doneTime;
 
     public Order(int userId, int mealId, Timestamp doneTime) {
