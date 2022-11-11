@@ -11,7 +11,13 @@ import javax.persistence.*;
             })
 public class Waiter {
     @Id
-    @Column(name = "user_id")
+    @Column(name = "waiter_id")
+    @SequenceGenerator(name = "waiter_sequence",
+            sequenceName = "waiter_sequence",
+            initialValue = 1,
+            allocationSize = 1)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE,
+            generator = "waiter_sequence")
     private int id;
     private int workNumber;
     private int userPhoneNumber;
