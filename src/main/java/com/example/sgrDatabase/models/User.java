@@ -19,11 +19,23 @@ public class User {
     @GeneratedValue(strategy = GenerationType.SEQUENCE,
             generator = "user_sequence")
     private int id;
+    @Column(name = "user_number",
+            columnDefinition = "INTEGER")
     private int userIdNumber;
+    @Column(name = "user_phone_number",
+            columnDefinition = "INTEGER")
     private int userPhoneNumber;
+    @Column(name = "user_name",
+            columnDefinition = "VARCHAR")
     private String name;
+    @Column(name = "user_seat_number",
+            columnDefinition = "VARCHAR")
     private String seatNumber;
+    @Column(name = "user_coach_number",
+            columnDefinition = "VARCHAR")
     private String coachNumber;
+    @Column(name = "user_email_address",
+            columnDefinition = "VARCHAR")
     private String emailAddress;
 
     public User(){
