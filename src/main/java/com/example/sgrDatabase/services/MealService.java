@@ -27,7 +27,7 @@ public class MealService implements MealDao {
 
     @Override
     public List<Meal> getAllMeals() {
-        return null;
+        return repo.findAll();
     }
 
     @Override
