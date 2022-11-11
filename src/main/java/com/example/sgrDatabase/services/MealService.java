@@ -31,7 +31,7 @@ public class MealService implements MealDao {
     }
 
     @Override
-    public List<Meal> findByCategory() {
-        return null;
+    public List<Meal> findByCategory(String mealCategory) {
+        return repo.findByCategory(mealCategory);
     }
 }
