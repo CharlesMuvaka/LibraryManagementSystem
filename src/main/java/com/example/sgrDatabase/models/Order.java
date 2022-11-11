@@ -1,12 +1,12 @@
 package com.example.sgrDatabase.models;
 
-import javax.persistence.Entity;
-import javax.persistence.Table;
-import javax.persistence.UniqueConstraint;
+import javax.persistence.*;
 import java.sql.Timestamp;
 @Entity
 @Table(name = "orders")
 public class Order {
+    @Id
+    @Column(name = "user_id")
     private int id;
     private int userId;
     private int mealId;
