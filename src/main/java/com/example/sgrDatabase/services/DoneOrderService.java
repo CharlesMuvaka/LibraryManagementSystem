@@ -23,7 +23,7 @@ public class DoneOrderService implements DoneOrderDao {
 
     @Override
     public DoneOrder getDoneOrderById(int id) {
-        return null;
+        return repo.getReferenceById(id);
     }
 
     @Override
