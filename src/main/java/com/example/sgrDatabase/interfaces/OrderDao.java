@@ -10,4 +10,5 @@ public interface OrderDao {
     //Read
     Order getOrderById(int id);
     List<Order> getAllOrders();
+    List<Order> getOrdersByUser(int id);
 }
