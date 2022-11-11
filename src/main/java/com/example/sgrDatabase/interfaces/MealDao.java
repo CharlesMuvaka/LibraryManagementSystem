@@ -1,4 +1,8 @@
 package com.example.sgrDatabase.interfaces;
 
-public interface Meal {
+import com.example.sgrDatabase.models.Meal;
+
+public interface MealDao {
+    //Create
+    void addMeal(Meal meal);
 }
