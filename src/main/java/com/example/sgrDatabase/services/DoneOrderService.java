@@ -33,8 +33,8 @@ public class DoneOrderService implements DoneOrderDao {
     }
 
     @Override
-    public List<DoneOrderDao> getAllDoneOrders() {
-        return null;
+    public List<DoneOrder> getAllDoneOrders() {
+        return repo.findAll();
     }
 
     @Override
