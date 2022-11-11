@@ -1,7 +1,6 @@
 package com.example.sgrDatabase.services;
 
 import com.example.sgrDatabase.interfaces.DoneOrderDao;
-import com.example.sgrDatabase.interfaces.UserDao;
 import com.example.sgrDatabase.models.DoneOrder;
 import com.example.sgrDatabase.repositories.DoneOrderRepo;
 import org.springframework.stereotype.Service;
@@ -38,7 +37,7 @@ public class DoneOrderService implements DoneOrderDao {
     }
 
     @Override
-    public List<UserDao> getUsersOrders(int id) {
-        return null;
+    public Optional<DoneOrder> getUsersOrders(int userId) {
+        return repo.findById(userId);
     }
 }
