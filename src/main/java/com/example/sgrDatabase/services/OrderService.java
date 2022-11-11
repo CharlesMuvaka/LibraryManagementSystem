@@ -17,7 +17,7 @@ public class OrderService implements OrderDao {
 
     @Override
     public void addOrder(Order order) {
-
+        repo.save(order);
     }
 
     @Override
