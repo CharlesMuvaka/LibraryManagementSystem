@@ -21,8 +21,8 @@ public class WaiterService implements Worker {
     }
 
     @Override
-    public Waiter getaWaiterById(Waiter waiter) {
-        return null;
+    public Waiter getaWaiterById(int waiterId) {
+        return repo.getReferenceById(waiterId);
     }
 
     @Override
