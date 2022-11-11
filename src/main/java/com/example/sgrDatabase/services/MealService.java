@@ -17,7 +17,7 @@ public class MealService implements MealDao {
 
     @Override
     public void addMeal(Meal meal) {
-
+        repo.save(meal);
     }
 
     @Override
