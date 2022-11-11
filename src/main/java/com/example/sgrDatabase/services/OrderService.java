@@ -27,7 +27,7 @@ public class OrderService implements OrderDao {
 
     @Override
     public List<Order> getAllOrders() {
-        return null;
+        return repo.findAll();
     }
 
     @Override
