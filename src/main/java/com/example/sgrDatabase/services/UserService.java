@@ -22,7 +22,7 @@ public class UserService implements UserDao {
 
     @Override
     public User getUserById(int id) {
-        return null;
+        return repo.getReferenceById(id);
     }
 
     @Override
