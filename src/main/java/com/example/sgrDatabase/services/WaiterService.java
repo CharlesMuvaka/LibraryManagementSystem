@@ -27,6 +27,6 @@ public class WaiterService implements Worker {
 
     @Override
     public List<Waiter> getWaiters() {
-        return null;
+        return repo.findAll();
     }
 }
