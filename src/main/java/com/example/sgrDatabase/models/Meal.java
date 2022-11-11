@@ -6,7 +6,7 @@ import javax.persistence.*;
 @Table(name = "meals")
 public class Meal {
     @Id
-    @Column(name = "user_id")
+    @Column(name = "meal_id")
     @SequenceGenerator(name = "meals_sequence",
             sequenceName = "meals_sequence",
             initialValue = 1,
@@ -14,9 +14,17 @@ public class Meal {
     @GeneratedValue(strategy = GenerationType.SEQUENCE,
             generator = "meals_sequence")
     private int id;
+    @Column(name = "meal_name",
+            columnDefinition = "VARCHAR")
     private String name;
+    @Column(name = "meal_category",
+            columnDefinition = "VARCHAR")
     private String category;
+    @Column(name = "meal_origin",
+            columnDefinition = "VARCHAR")
     private String Origin;
+    @Column(name = "meal_description",
+            columnDefinition = "TEXT")
     private String Description;
 
     public Meal() {
