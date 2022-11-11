@@ -22,7 +22,7 @@ public class OrderService implements OrderDao {
 
     @Override
     public Order getOrderById(int id) {
-        return null;
+        return repo.getReferenceById(id);
     }
 
     @Override
