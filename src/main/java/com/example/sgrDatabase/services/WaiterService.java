@@ -17,7 +17,7 @@ public class WaiterService implements Worker {
 
     @Override
     public void addWorker(Waiter waiter) {
-
+        repo.save(waiter);
     }
 
     @Override
