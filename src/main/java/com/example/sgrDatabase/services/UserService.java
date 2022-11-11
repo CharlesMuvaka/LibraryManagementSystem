@@ -27,6 +27,6 @@ public class UserService implements UserDao {
 
     @Override
     public List<User> getAlUsers() {
-        return null;
+        return repo.findAll();
     }
 }
