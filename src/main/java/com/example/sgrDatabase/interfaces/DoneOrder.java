@@ -9,6 +9,7 @@ public interface DoneOrder {
     void addDoneOrder(DoneOrder doneOrder);
     //Read
     DoneOrder getDoneOrderById(int id);
+    List<Waiter> getWaitersDoneOrdersById(int id);
 
     //Update
     //delete
